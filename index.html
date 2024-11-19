@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Get the current URL
+        const currentUrl = window.location.href;
+        
+        // Check if the URL contains a '#'
+        if (currentUrl.includes('#')) {
+            // Extract the part after the '#'
+            const fragment = currentUrl.split('#')[1];
+        
+            // Construct the new URL
+            const newUrl = `https://example.com/${encodeURIComponent(fragment)}`;
+        
+            // Redirect to the new URL
+            window.location.href = newUrl;
+        }
+        </script>
+</body>
+</html>
